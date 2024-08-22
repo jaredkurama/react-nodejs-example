@@ -4,7 +4,8 @@ def buildImage() {
         sh 'docker build -t jaredkurama/demo-app:my-app:2.0 .'
         sh "echo $PASS | docker login -u $USER --password-stdin"
         sh 'docker push jaredkurama/demo-app:my-app:2.0'
-    } 
+    }
+}
 def deployApp() {
     echo 'deploying the application...'
 } 
